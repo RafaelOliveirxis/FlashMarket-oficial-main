@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="FlashMarket — produtos, ofertas e novidades em um só lugar.">
+<title>FlashMarket | Sua Loja Online</title>
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="top-strip">
+  <div class="wrap top-inner">
+    <strong>WHATSAPP: (11) 99725-5630</strong>
+    <div class="top-links">
+      <a href="#contato">Central de Atendimento</a>
+      <a href="#pedidos">Rastrear Pedido</a>
+      <a href="#conta">Área de Afiliado</a>
+      <a href="#blog">Blog</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap header-main">
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu">☰</button>
+
+    <a class="brand" href="#inicio" aria-label="FlashMarket">
+      <img src="assets/favicon.png" alt="FlashMarket" class="brand-logo">
+    </a>
+
+    <form class="search" id="searchForm">
+      <input id="searchInput" type="search" placeholder="Pesquise aqui..." autocomplete="off">
+      <button aria-label="Pesquisar" type="submit">⌕</button>
+    </form>
+
+    <div class="header-actions">
+      <button class="head-action" id="accountBtn"><span>👤</span><b id="accountText">ENTRAR</b></button>
+      <button class="head-action balance" id="balanceBtn"><span>💳</span><b>R$ 0,00</b></button>
+      <button class="head-action circle" id="favBtn" aria-label="Favoritos">♥<i id="favCount">0</i></button>
+      <button class="head-action circle cart-icon" id="cartBtn" aria-label="Carrinho">🛒<i id="cartCount">0</i></button>
+
+   </div>
+  </div>
+
+  <nav class="main-nav" id="mainNav">
+    <div class="wrap nav-inner">
+      <a class="active" href="#inicio">⌂ INÍCIO</a>
+      <a href="#categorias">▦ CASA & DECOR</a>
+      <a href="#categorias">⌁ HOME OFFICE</a>
+      <a href="#categorias">🚀 KIDS</a>
+      <a href="#produtos">♟ VESTUÁRIO</a>
+      <a href="#produtos">▤ PAPELARIA</a>
+      <a href="#categorias">♟ TEMAS</a>
+      <a class="hot" href="#ofertas">🔥 OFERTAS FLASH</a>
+    </div>
+  </nav>
+</header>
+
+<main id="inicio"> 
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-content">
+    <div class="hero-copy">
+      <span class="hero-tag">⚡ OFERTAS FLASH</span>
+      <h1>PRODUTOS<br><em>INCRÍVEIS</em><br>PARA VOCÊ.</h1>
+      <p>Achadinhos, tecnologia, moda, casa, decoração e muito mais com preços que fazem você clicar.</p>
+      <div class="hero-buttons">
+        <a class="btn yellow" href="#ofertas">EU QUERO!</a>
+        <a class="btn dark" href="#produtos">VER PRODUTOS</a>
+      </div>
+      <div class="hero-points">
+        <span>✓ Compra segura</span>
+        <span>✓ Pix e cartão</span>
+        <span>✓ Envio para todo Brasil</span>
+      </div>
+    </div>
+
+    <div class="hero-product" aria-hidden="true">
+      <div class="burst">ATÉ<br><strong>50%</strong><br>OFF</div>
+      <div class="product-stage">
+        <div class="stage-card stage-back"></div>
+        <div class="stage-card stage-front">
+          <div class="big-product">⚡</div>
+        </div>
+        <div class="floating f1">🎧</div>
+        <div class="floating f2">⌨️</div>
+        <div class="floating f3">🎮</div>
+      </div>
+      <div class="hero-mini-tag">FLASH<br><small>DEALS</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="promo-row wrap">
+  <a href="#produtos" class="promo-card card-yellow"><span>CANECAS<br><b>IRADAS!</b></span><i>☕</i></a>
+  <a href="#produtos" class="promo-card card-blue"><span>MOUSE<br><b>PADS</b></span><i>🖱️</i></a>
+  <a href="#produtos" class="promo-card card-red"><span>ALMOFADAS<br><b>INCRÍVEIS</b></span><i>🛋️</i></a>
+</section>
+
+
+<section class="promo-row wrap second-row">
+  <a href="#produtos" class="promo-card wide card-dark"><span>CAMISETAS<br><b>FLASH POWER</b></span><i>👕</i></a>
+  <a href="#produtos" class="promo-card wide card-blue"><span>PLACAS<br><b>DECORATIVAS</b></span><i>🪧</i></a>
+</section>
+
+<section class="categories-section" id="categorias">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="section-label">EXPLORE</span><h2>COMPRE POR CATEGORIA</h2></div>
+      <a href="#produtos">Ver tudo →</a>
+    </div>
+    <div class="category-grid" id="categoryGrid"></div>
+  </div>
+</section>
+
+<section class="products-section" id="ofertas">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="section-label">🔥 OFERTAS</span><h2>OFERTAS FLASH</h2></div>
+      <a href="#produtos">Ver todas →</a>
+    </div>
+    <div class="product-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<section class="products-section light" id="produtos">
+  <div class="wrap">
+    <div class="section-head product-heading">
+      <div><span class="section-label">CATÁLOGO</span><h2>PRODUTOS EM DESTAQUE</h2></div>
+      <div class="filters">
+        <select id="categoryFilter"><option value="all">Todas as categorias</option></select>
+        <select id="sortFilter">
+          <option value="featured">Mais relevantes</option>
+          <option value="priceAsc">Menor preço</option>
+          <option value="priceDesc">Maior preço</option>
+          <option value="rating">Melhor avaliação</option>
+        </select>
+      </div>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+    <div class="empty" id="emptyState">Nenhum produto encontrado.</div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="wrap benefit-grid">
+    <div><strong>🚚 FRETE RÁPIDO</strong><span>Entrega para todo o Brasil.</span></div>
+    <div><strong>🔒 COMPRA SEGURA</strong><span>Checkout protegido.</span></div>
+    <div><strong>💳 PAGAMENTO FÁCIL</strong><span>Pix, cartão e boleto.</span></div>
+    <div><strong>⚡ OFERTAS DIÁRIAS</strong><span>Novidades toda semana.</span></div>
+  </div>
+</section>
+
+<section class="newsletter" id="blog">
+  <div class="wrap newsletter-inner">
+    <div>
+      <span class="section-label">NEWSLETTER</span>
+      <h2>RECEBA AS MELHORES OFERTAS</h2>
+      <p>Cadastre seu e-mail e receba cupons e novidades.</p>
+    </div>
+    <form id="newsletterForm">
+      <input type="email" id="newsletterEmail" required placeholder="Seu melhor e-mail">
+      <button class="btn yellow" type="submit">QUERO RECEBER</button>
+    </form>
+  </div>
+</section>
+
+<section class="map-section" id="contato">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="section-label">📍 LOCALIZAÇÃO</span><h2>ENCONTRE A FLASHMARKET</h2></div>
+    </div>
+    <div class="map">
+      <iframe src="https://www.google.com/maps?q=Barueri%2C%20SP&output=embed" loading="lazy" title="FlashMarket em Barueri"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-top-line"></div>
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a class="footer-brand" href="#inicio" aria-label="FlashMarket - voltar ao início">
+        <img src="assets/logo.FlashMarket.png" alt="FlashMarket" class="footer-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      </a>
+      <p>Variedade, preço e praticidade em um só lugar. Encontre ofertas, novidades e produtos selecionados para você.</p>
+      <a class="footer-whatsapp" href="https://wa.me/5511997255630" target="_blank" rel="noopener">💬 <span>Fale conosco no WhatsApp</span></a>
+    </div>
+
+       <div class="footer-column">
+      <h3>ATENDIMENTO</h3>
+      <a href="#contato">Central de Atendimento</a>
+      <a href="#">Rastrear Pedido</a>
+      <a href="#">Área de Afiliado</a>
+      <a href="#">Dúvidas Frequentes</a>
+    </div>
+
+    <div class="footer-column footer-payments">
+      <h3>FORMAS DE PAGAMENTO</h3>
+      <div class="payment-list">
+        <span>VISA</span><span>MASTER</span><span>PIX</span><span>BOLETO</span>
+      </div>
+      <h3 class="security-title">COMPRA SEGURA</h3>
+      <div class="security-badge">🔒 <span>Ambiente protegido<br><small>Checkout seguro</small></span></div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="wrap footer-bottom-inner">
+      <span>© 2026 FlashMarket — Todos os direitos reservados.</span>
+      <span>Feito para uma experiência de compra rápida e segura. <b>⚡</b></span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<div class="modal" id="accountModal">
+  <div class="modal-box">
+    <button class="close" data-close="accountModal">×</button>
+    <div id="authContent"></div>
+  </div>
+</div>
+
+<div class="modal" id="cartModal">
+  <div class="modal-box wide">
+    <button class="close" data-close="cartModal">×</button>
+    <span class="section-label">SEU PEDIDO</span>
+    <h2>MEU CARRINHO</h2>
+    <div id="cartItems"></div>
+    <div class="cart-coupon">
+      <label for="couponInput">Cupom de desconto</label>
+      <div><input id="couponInput" placeholder="Ex.: FLASH10"><button id="applyCoupon">APLICAR</button></div>
+      <small id="couponMsg"></small>
+    </div>
+    <div class="cart-total"><span>Subtotal</span><strong id="cartSubtotal">R$ 0,00</strong></div>
+    <div class="cart-total"><span>Desconto</span><strong id="cartDiscount">R$ 0,00</strong></div>
+    <div class="cart-total"><span>Frete</span><strong id="cartShipping">R$ 0,00</strong></div>
+    <div class="cart-total grand"><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+    <button class="btn yellow full" id="checkoutBtn">FINALIZAR COMPRA</button>
+  </div>
+</div>
+
+<div class="modal" id="favModal">
+  <div class="modal-box wide">
+    <button class="close" data-close="favModal">×</button>
+    <span class="section-label">SALVOS</span>
+    <h2>MEUS FAVORITOS</h2>
+    <div class="product-grid" id="favGrid"></div>
+  </div>
+</div>
+
+<div class="modal" id="detailModal">
+  <div class="modal-box">
+    <button class="close" data-close="detailModal">×</button>
+    <div id="detail"></div>
+  </div>
+</div>
+
+<div class="modal" id="checkoutModal">
+  <div class="modal-box checkout-box">
+    <button class="close" data-close="checkoutModal" aria-label="Fechar">×</button>
+  
+    <div class="checkout-header">
+      <span class="section-label">CHECKOUT</span>
+      <h2>FINALIZE SEU PEDIDO</h2>
+      <p>Preencha seus dados para concluir a compra.</p>
+    </div>
+  
+    <form id="checkoutForm" class="checkout-form">
+  
+      <div class="form-group">
+        <label for="checkoutName">Nome completo</label>
+        <input
+          id="checkoutName"
+          type="text"
+          placeholder="Digite seu nome completo"
+          required
+        >
+      </div>
+  
+      <div class="form-group">
+        <label for="checkoutCpf">CPF</label>
+        <input
+          id="checkoutCpf"
+          type="text"
+          placeholder="000.000.000-00"
+          required
+        >
+      </div>
+  
+      <div class="form-group">
+        <label for="checkoutAddress">Endereço</label>
+        <input
+          id="checkoutAddress"
+          type="text"
+          placeholder="Rua, número e complemento"
+          required
+        >
+      </div>
+  
+      <div class="two-col">
+        <div class="form-group">
+          <label for="checkoutCity">Cidade</label>
+          <input
+            id="checkoutCity"
+            type="text"
+            placeholder="Sua cidade"
+            required
+          >
+        </div>
+  
+        <div class="form-group">
+          <label for="checkoutCep">CEP</label>
+          <input
+            id="checkoutCep"
+            type="text"
+            placeholder="00000-000"
+            required
+          >
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="checkoutPayment">Forma de pagamento</label>
+        <select id="checkoutPayment" required>
+          <option value="">Selecione uma opção</option>
+          <option value="pix">PIX</option>
+          <option value="cartao">Cartão de crédito</option>
+          <option value="boleto">Boleto bancário</option>
+        </select>
+      </div>
+  
+      <div class="checkout-security">
+        <span>🔒</span>
+        <div>
+          <strong>Compra segura</strong>
+          <small>Seus dados são protegidos durante o checkout.</small>
+        </div>
+      </div>
+  
+      <button type="submit" class="btn yellow full checkout-submit">
+        CONFIRMAR PEDIDO
+      </button>
+  
+    </form>
+  
+    <p class="form-note" id="checkoutNote"></p>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
